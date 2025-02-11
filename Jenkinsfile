@@ -5,16 +5,16 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat '''
-        echo Starting hello World pipeline
-        javac main.java
+        sh '''
+        echo "Starting hello World pipeline"
+        javac Hello.java
         '''
       }
     }
     stage('Execute') {
       steps {
-        bat '''
-        java main
+        sh '''
+        java Hello
         '''
       }
     }
